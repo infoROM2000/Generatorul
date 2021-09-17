@@ -7,8 +7,6 @@ import xlsxwriter
 from tkcalendar import DateEntry
 from tkinter import messagebox
 
-from interface import create_interface
-
 r = 2
 tipuri = []
 date = []
