@@ -1,4 +1,4 @@
-from utilities import error_print
+from .utils import error_print
 
 
 class CustomError(Exception):
