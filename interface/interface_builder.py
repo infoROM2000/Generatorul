@@ -15,7 +15,7 @@ class InterfaceBuilder:
         self.__width = 0
         self.__entries = dict()
         self.__root = tk.Tk()
-        self.__self_row = 0
+        self.__self_row = 2
 
     def set_height(self, height: int) -> 'InterfaceBuilder':
         self.__height = height
@@ -67,9 +67,11 @@ class InterfaceBuilder:
         element.set(set_value)
         return element
 
-    def append_option_menu(self, string_var: tk.StringVar, choices: List[str], column: int):
+    def append_option_menu(self, string_var: tk.StringVar, choices: List[str], row: int, column: int,
+                           string_var_name: str = ""):
         element = tk.OptionMenu(self.__root, string_var, *choices)
-        self.__set_grid(element, row=self.__self_row, column=column)
+        self.__entries[string_var_name] = string_var
+        self.__set_grid(element, row=row, column=column)
 
     def increase_self_row(self):
         self.__self_row += 1
@@ -91,3 +93,7 @@ class InterfaceBuilder:
 
 def add_errorbox_message(message: str):
     messagebox.showerror(StrConstants().error(), message=message)
+
+
+def add_infobox_message(message: str):
+    messagebox.showinfo(StrConstants().info(), message=message)

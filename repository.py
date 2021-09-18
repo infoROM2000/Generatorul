@@ -44,3 +44,6 @@ class InterfaceDataHolder:
         return [
             (client_interface.get_entry(f"{data_type}_{index}")).get() for index in range(self.__data_types[data_type])
         ]
+
+
+data_holder = InterfaceDataHolder()
