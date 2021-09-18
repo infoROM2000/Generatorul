@@ -6,6 +6,10 @@ c_default_client_language = "ro"
 c_file_name = "file_name"
 c_previous_sum = "previous_sum"
 c_day = "day"
+c_type = "type"
+c_explanation = "explanation"
+c_value = "value"
+c_plus = "+"
 
 
 class StrConstants:
@@ -42,8 +46,8 @@ class StrConstants:
 
     def type(self):
         if self.language == "en":
-            return "TYPE"
-        return "TIP"
+            return "Type"
+        return "Tip"
 
     def day(self):
         if self.language == "en":
@@ -79,3 +83,43 @@ class StrConstants:
         if self.language == "en":
             return "No days"
         return "Nicio zi"
+
+    def short_number(self):
+        if self.language == "en":
+            return "No."
+        return "Nr."
+
+    def explanations(self):
+        if self.language == "en":
+            return "Explanations"
+        return "Explicații"
+
+    def caching(self):
+        if self.language == "en":
+            return "Caching"
+        return "Încasări"
+
+    def payments(self):
+        if self.language == "en":
+            return "Payments"
+        return "Plăți"
+
+    def date(self):
+        if self.language == "en":
+            return "Date"
+        return "Data"
+
+    def previous_day_balance_report(self):
+        if self.language == "en":
+            return "Balance report on previous day"
+        return "Raport/sold ziua precendentă"
+
+    def info(self):
+        if self.language == "en":
+            return "Info"
+        return "Info"
+
+    def file_generated_successfully(self):
+        if self.language == "en":
+            return "File generated successfully!"
+        return "Fișier generat cu succes!"
